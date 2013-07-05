@@ -18,6 +18,14 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Alamano::VERSION
 
-  gem.add_dependency ""
+  gem.add_dependency "rake"
+  gem.add_dependency "yaml"
+  gem.add_dependency "erb"
+  gem.add_dependency "rdiscount"
+  gem.add_dependency "haml"
+  gem.add_dependency "json"
+
+  gem.add_development_dependency "rspec"
+  gem.add_development_dependency "awesome_print"
 
 end
