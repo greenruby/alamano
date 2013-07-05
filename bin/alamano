@@ -1,2 +1,11 @@
 #!/bin/env ruby
 
+require_relative '../lib/alamano'
+
+case $1
+when 'help'
+when 'init'
+when 'build'
+else
+  Alamo::Config.echo
+end
