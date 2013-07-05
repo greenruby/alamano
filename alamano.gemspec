@@ -19,8 +19,6 @@ Gem::Specification.new do |gem|
   gem.version       = Alamano::VERSION
 
   gem.add_dependency "rake"
-  gem.add_dependency "yaml"
-  gem.add_dependency "erb"
   gem.add_dependency "rdiscount"
   gem.add_dependency "haml"
   gem.add_dependency "json"
