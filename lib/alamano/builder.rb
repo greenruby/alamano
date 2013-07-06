@@ -5,20 +5,20 @@ require 'rdiscount'
 require 'haml'
 require 'json'
 
+require "alamano/config"
+
 YAML::ENGINE.yamler = 'psych'
 
-module Alamano
+class Alamano
 
   class Builder
 
-    attr_reader :c
+    def initialize(config)
+      @config = config
+    end
 
-    def initialize
-      @root = File.expand_path('../../../', __FILE__)
-      @news_path = File.join(@root, 'app', 'newsletters')
-      @views_path = File.join(@root, 'views')
-      @pages_path = File.join(@root, 'app', 'pages')
-      @static_path = File.join(@root, 'static')
+    def list_files
+      dir = Dir.glob(File.join(config.pages,'*'))
     end
 
     def make_letter(source)

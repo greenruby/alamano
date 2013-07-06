@@ -1,14 +1,12 @@
-#!/bin/env ruby
+#!/usr/bin/env ruby
+$:.push File.expand_path("../../lib", __FILE__)
 
-puts 'a'
-exit
-
-require File.expand_path('../../lib/alamano', __FILE__)
+require 'alamano'
 
 case $1
 when 'help'
 when 'init'
 when 'build'
 else
-  Alamo::Config.echo
+  Alamano::Config.echo
 end
