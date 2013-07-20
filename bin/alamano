@@ -5,6 +5,11 @@ require 'alamano'
 
 case $1
 when 'help'
+  puts <<-_END_
+    help:   this help text
+    init:   creates sample configuration and skeleton
+    build:  process the templates and generates static files
+  _END_
 when 'init'
 when 'build'
 else
