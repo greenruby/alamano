@@ -5,20 +5,24 @@ require 'rdiscount'
 require 'haml'
 require 'json'
 
-require "alamano/config"
-
 YAML::ENGINE.yamler = 'psych'
 
-class Alamano
+module Alamano
 
   class Builder
 
+    include Alamano::Ostruct
+
+    attr_reader :config
+
     def initialize(config)
-      @config = config
+      @config ||= to_ostruct(YAML::load_file(config))
+      @dir = Dir.glob(File.join(@config.pages,'*'))
     end
 
-    def list_files
-      dir = Dir.glob(File.join(config.pages,'*'))
+    def files(task)
+      r = Regexp.new(task.regexp)
+      @dir.select { |d| r =~ d }
     end
 
     def make_letter(source)

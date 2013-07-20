@@ -1,4 +1,4 @@
-class Alamano
+module Alamano
   class Setup
 
   end

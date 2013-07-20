@@ -10,4 +10,4 @@ RSpec.configure do |config|
   end
 end
 
-ENV['config'] = 'spec/files/alamano.yml'
+ENV['config'] = File.expand_path('../files/alamano.yml', __FILE__)

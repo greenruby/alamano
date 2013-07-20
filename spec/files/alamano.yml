@@ -1,10 +1,10 @@
 templates: spec/files/templates
 pages: spec/files/pages
 site: spec/files/site
-clothing:
-  - testpages1:
-      regexp: /page.*\.md/
-      template: test1.haml
-  - testpages2:
-      regexp: /page.*\.(yml|json)/
-      template: test2.haml
+tasks:
+  - regexp: /page.*\.md/
+    template: test1.haml
+    destination: .
+  - regexp: /page.*\.(yml|json)/
+    template: test2.haml
+    destination: .
