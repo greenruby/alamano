@@ -1,7 +1,6 @@
-$LOAD_PATH << File.expand_path('../../lib', __FILE__)
-
 require 'rspec/autorun'
-require 'alamano'
+
+require_relative '../lib/alamano'
 
 RSpec.configure do |config|
   config.mock_with :rspec
