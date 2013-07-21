@@ -17,13 +17,9 @@ module Alamano
 
     def initialize(config)
       @config ||= to_ostruct(YAML::load_file(config))
-      @dir = Dir.glob(File.join(@config.pages,'*'))
     end
 
-    def files(task)
-      r = Regexp.new(task.regexp)
-      @dir.select { |d| r =~ d }
-    end
+
 
     def make_letter(source)
 

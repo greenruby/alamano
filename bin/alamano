@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
-$:.push File.expand_path("../../lib", __FILE__)
 
-require 'alamano'
+require_relative '../lib/alamano'
 
 case $1
 when 'help'
