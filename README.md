@@ -6,19 +6,15 @@ A very manual dead simple static website generator in ruby.
 
 Add this line to your application's Gemfile:
 
-    gem 'alamano'
+    gem 'alamano', github: "mose/alamano"
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install alamano
-
 ## Usage
 
-TODO: Write usage instructions here
+This gem is not usable yet.
 
 ## Contributing
 

@@ -15,8 +15,13 @@ describe Alamano::Task do
     expect(@task.files).to eq ["./spec/files/pages/page2.md"]
   end
 
-  it "returns error if the extension is unknown" do
+  it "returns error if the extension for a file is unknown" do
     @task = Alamano::Task.new('./spec/files/pages',/page.*\.xyz/,'','')
+    expect { @task.run }.to raise_error(Alamano::UnknownExtensionError, 'Unknown extension for page_error.xyz')
+  end
+
+  it "returns error if the extension for a template is unknown" do
+    @task = Alamano::Task.new('',//,'./spec/files/templates/','')
     expect { @task.run }.to raise_error(Alamano::UnknownExtensionError, 'Unknown extension for page_error.xyz')
   end
 
