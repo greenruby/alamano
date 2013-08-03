@@ -1,6 +1,6 @@
 # Alamano
 
-A very manual dead simple static website generator in ruby.
+A very manual dead simple static website generator in ruby. A la mano, in some latin language, means 'manually'.
 
 ## Installation
 
